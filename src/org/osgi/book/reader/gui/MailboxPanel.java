@@ -9,6 +9,8 @@ import org.osgi.book.reader.api.MailboxException;
 
 public class MailboxPanel extends JPanel {
 
+	private static final long serialVersionUID = 1L;
+	
 	private final MailboxTableModel tableModel;
 	
 	public MailboxPanel(Mailbox mbox) throws MailboxException {

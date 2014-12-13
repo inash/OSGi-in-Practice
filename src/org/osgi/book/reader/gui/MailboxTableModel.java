@@ -11,13 +11,12 @@ import org.osgi.book.reader.api.Message;
 
 public class MailboxTableModel extends AbstractTableModel {
 
+	private static final long serialVersionUID = 1L;
 	private static final String ERROR = "ERROR";
 	
-	private final Mailbox mailbox;
 	private final List<Message> messages;
 	
 	public MailboxTableModel(Mailbox mailbox) throws MailboxException {
-		this.mailbox = mailbox;
 		long[] messageIds = mailbox.getAllMessages();
 		messages = new ArrayList<Message>(messageIds.length);
 		Message[] messageArray = mailbox.getMessages(messageIds);

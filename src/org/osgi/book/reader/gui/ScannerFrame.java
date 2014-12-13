@@ -13,6 +13,8 @@ import org.osgi.framework.BundleContext;
 
 public class ScannerFrame extends JFrame {
 	
+	private static final long serialVersionUID = 1L;
+
 	private JTabbedPane tabbedPane;
 	private ScannerMailboxTracker tracker;
 	

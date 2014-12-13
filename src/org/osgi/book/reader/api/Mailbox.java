@@ -13,6 +13,15 @@ public interface Mailbox {
 	long[] getAllMessages() throws MailboxException;
 	
 	/**
+	 * Retrieve the specified messages.
+	 * 
+	 * @param ids The IDs of the messages to be retrieved.
+	 * @return An array of Messages.
+	 * @throws MailboxException
+	 */
+	Message[] getMessages(long[] ids) throws MailboxException;
+	
+	/**
 	 * Retrieve all messages received after the specified message.
 	 * 
 	 * @param id The message ID.
@@ -31,13 +40,4 @@ public interface Mailbox {
 	 * @throws MailboxException
 	 */
 	void markRead(boolean read, long[] ids) throws MailboxException;
-	
-	/**
-	 * Retrieve the specified messages.
-	 * 
-	 * @param ids The IDs of the messages to be retrieved.
-	 * @return An array of Messages.
-	 * @throws MailboxException
-	 */
-	Message[] getMessages(long[] ids) throws MailboxException;
 }
